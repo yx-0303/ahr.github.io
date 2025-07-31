@@ -500,46 +500,119 @@
 }
 
 /*======================================
-=           底部下载按钮区域            =
+=           下载按钮样式              =
 ======================================*/
-.bottom-download-section {
+.download-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #fff;
+    border: 2px solid #3498db;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.download-title {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.download-buttons {
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: var(--background-white);
-    border-radius: var(--card-border-radius);
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
 }
 
-.bottom-download-section .download-btn {
-    position: static; /* 覆盖固定定位 */
-    top: auto;
-    right: auto;
-    z-index: auto;
+/* 下载按钮样式 */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-width: 180px;
-    padding: 12px 24px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    color: #1976d2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: none;
+    font-weight: 500;
+    text-decoration: none;
+    border: 2px solid #2196f3;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(33, 150, 243, 0.2);
+    backdrop-filter: blur(10px);
+    will-change: transform, box-shadow;
 }
 
-.bottom-download-section .download-btn:hover {
+.download-btn::before {
+    content: "⬇";
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 16px;
+    color: #1976d2;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #bbdefb 0%, #90caf9 100%);
+    color: #1565c0;
+    border-color: #1976d2;
+    box-shadow: 0 6px 25px rgba(33, 150, 243, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn:hover::before {
+    transform: translateY(2px);
+    color: #1565c0;
+}
+
+.download-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn-text {
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: #1976d2;
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .bottom-download-section {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 15px;
+    .download-section {
+        padding: 1.5rem;
+        margin-top: 2rem;
     }
     
-    .bottom-download-section .download-btn {
+    .download-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .download-buttons {
+        gap: 0.8rem;
+    }
+    
+    .download-btn {
+        min-width: 160px;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download-btn {
         min-width: 200px;
-        padding: 15px 20px;
-        font-size: 16px;
+        padding: 12px 18px;
+        font-size: 14px;
     }
 }

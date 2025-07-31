@@ -182,7 +182,7 @@ class BreadcrumbNavigation {
             'Zwgl': '职位管理',
             'Zwgl-page1': '职位竞聘流程',
             'Zwgl-page2': '职位调整流程',
-            'Zwgl-page3': '职位双选',
+            'Zwgl-page3': '试岗考评',
             'Zjgl': '职级管理',
             'Zjgl-page1': '聘任后个人职级的套入',
             'Zjgl-page2': '标准化职级晋升',
@@ -228,7 +228,7 @@ class BreadcrumbNavigation {
         const pageIcons = {
             'Zwgl-page1': '🎯',
             'Zwgl-page2': '🔄',
-            'Zwgl-page3': '🤝',
+            'Zwgl-page3': '📋',
             'Zjgl-page1': '📈',
             'Zjgl-page2': '⚙️',
             'Zjgl-page3': '🔄',

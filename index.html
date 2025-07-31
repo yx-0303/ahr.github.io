@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,17 +15,43 @@
             transform: translateY(20px);
             transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
-        
+
         body.page-loaded {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* 确保 SVG 图标有明确的尺寸 */
+        .feature-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 140px;
+            /* 增大图标容器尺寸 */
+            height: 140px;
+            /* 增大图标容器尺寸 */
+            margin: 0 auto 20px;
+            /* 居中并增加下方留白，避免与文字重叠 */
+            /* 移除背景颜色，保持简洁 */
+        }
+
+        /* 统一 img 和 object 的样式，确保图标大小一致 */
+        .feature-icon img,
+        .feature-icon object {
+            display: block;
+            /* 防止行内元素产生的额外空间 */
+            width: 80px;
+            /* 增大SVG图标尺寸 */
+            height: 80px;
+            /* 增大SVG图标尺寸 */
+            /* 确保图标在容器内居中且不会超出边界 */
+            object-fit: contain;
+            /* 确保SVG完整显示不被裁剪 */
+        }
     </style>
-    <!-- 预连接国内静态文件 CDN -->
     <link rel="preconnect" href="https://cdn.staticfile.org" crossorigin>
-
-
 </head>
+
 <body>
 
     <header class="main-header">
@@ -57,52 +84,53 @@
                 <a href="Zwgl/Zwgl.html" class="feature-link">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.02-9.352a.75.75 0 0 1 1.06 0l1.459 1.46 3.48-3.48a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 0 1 0-1.06zM12 4a8 8 0 0 0-5.657 13.657A8 8 0 0 0 12 4z"/></svg>
+                            <object data="SVG/bg1.svg" type="image/svg+xml" width="48" height="48"
+                                aria-label="职位管理"></object>
                         </div>
                         <h3>职位管理</h3>
-                        
                     </div>
                 </a>
                 <a href="Pxgl/Pxgl.html" class="feature-link">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"/></svg>
+                            <object data="SVG/bg2.svg" type="image/svg+xml" width="48" height="48"
+                                aria-label="培训管理"></object>
                         </div>
                         <h3>培训管理</h3>
-                        
                     </div>
                 </a>
                 <a href="Zjgl/Zjgl.html" class="feature-link">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 1z"/></svg>
+                            <object data="SVG/bg3.svg" type="image/svg+xml" width="48" height="48"
+                                aria-label="职级管理"></object>
                         </div>
                         <h3>职级管理</h3>
-                        
                     </div>
                 </a>
                 <a href="Rzgl/Rzgl.html" class="feature-link">
                     <div class="feature-card">
-                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-9h4v2h-4v-2zm-4 4h12v2H6v-2z"/></svg>
+                        <div class="feature-icon">
+                            <object data="SVG/bg4.svg" type="image/svg+xml" width="48" height="48"
+                                aria-label="认证管理"></object>
                         </div>
                         <h3>认证管理</h3>
-                        
                     </div>
                 </a>
                 <a href="Jxgl/Jxgl.html" class="feature-link">
                     <div class="feature-card">
-                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                        <div class="feature-icon">
+                            <object data="SVG/bg5.svg" type="image/svg+xml" width="48" height="48"
+                                aria-label="绩效管理"></object>
                         </div>
                         <h3>绩效管理</h3>
-                        
                     </div>
                 </a>
                 <a href="Rcgl/Rcgl.html" class="feature-link">
                     <div class="feature-card">
-                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5-5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+                        <div class="feature-icon">
+                            <object data="SVG/bg6.svg" type="image/svg+xml" width="48" height="48"
+                                aria-label="人才管理"></object>
                         </div>
                         <h3>人才管理</h3>
                     </div>
@@ -111,15 +139,14 @@
         </div>
     </section>
 
-    <section id="process" class="process-section">  </section>
+    <section id="process" class="process-section"> </section>
     <footer id="contact" class="main-footer"> 这里可以添加联系方式 </footer>
-
 
     <script src="page-transitions.js"></script>
     <script src="script.js"></script>
     <script>
         // 主页淡入效果
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // 延迟一帧后开始淡入
             requestAnimationFrame(() => {
                 document.body.classList.add('page-loaded');
@@ -127,4 +154,5 @@
         });
     </script>
 </body>
+
 </html>
