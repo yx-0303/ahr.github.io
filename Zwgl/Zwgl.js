@@ -1,4 +1,3 @@
-// Zwgl.js
 document.addEventListener('DOMContentLoaded', function() {
     // 高亮当前页面导航项
     const navLinks = document.querySelectorAll('.nav-link');
@@ -42,8 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.querySelector('.section-icon').style.transform = 'scale(1)';
         });
     });
-});
-// 返回上一级功能
-document.getElementById('backButton').addEventListener('click', function() {
-    history.back();
+    
+    // 返回上一级功能（修复版）
+    const backButton = document.getElementById('backButton');
+    if (backButton) {
+        backButton.addEventListener('click', function() {
+            history.back();
+        });
+    }
 });
