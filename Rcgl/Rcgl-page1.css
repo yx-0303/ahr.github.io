@@ -486,7 +486,15 @@
 }
 
 .path-level.middle-level .expert-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0.8rem;
+}
+
+.path-level.middle-level .expert-card.skillful-hand-3 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 0.4rem);
 }
 
 .expert-card {
@@ -742,6 +750,48 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .expert-card {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .flow-row {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .process-step {
+        min-width: 100%;
+        max-width: 300px;
+    }
+
+    .step-header {
+        padding: 0.8rem;
+    }
+
+    .step-number {
+        width: 24px;
+        height: 24px;
+        font-size: 0.9rem;
+    }
+
+    .step-title {
+        font-size: 1rem;
+    }
+
+    .step-description {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .path-level.middle-level .expert-card.skillful-hand-3 {
+        grid-column: auto;
+        justify-self: auto;
+        width: 100%;
+    }
+}
     
     .expert-card {
         width: 100%;
@@ -777,7 +827,7 @@
         padding: 1rem;
         font-size: 0.85rem;
     }
-}
+
 
 /* 下载按钮区域样式 */
 .download-section {
